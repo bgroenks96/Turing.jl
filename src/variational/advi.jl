@@ -75,7 +75,7 @@ function Bijectors.bijector(
         if d isa Distributions.UnivariateDistribution
             b
         else
-            Vec(b, size(d))
+            Vec(b, size(Bijectors.transformed(d)))
         end
     end
 
